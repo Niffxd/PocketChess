@@ -27,7 +27,11 @@ export default function Board () {
             <div className={style.box} key={index} id={`${index}`} style={
               paintBox(index) ? { backgroundColor: 'brown' } : { backgroundColor: 'beige' }
             }>
-              <Piece piece={piece}/>
+              {
+                piece !== 'empty'
+                  ? <Piece piece={piece} white={index > 16}/>
+                  : ''
+              }
             </div>
           );
         })
