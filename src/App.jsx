@@ -1,14 +1,13 @@
-import Board from './components/Board'; // eslint-disable-line
-import Menu from './components/Menu'; // eslint-disable-line
-import Game from './components/Game'; // eslint-disable-line
-import background from './assets/backgorunds/background.jpg';
+// import pieces from './services/data.js';
+import Board from './components/Board/index.jsx'; // eslint-disable-line
 import './App.css';
 
 function App () {
   return (
-    <div className='app' style={{ backgroundImage: `url(${background})` }}>
-      {/* <Menu /> */}
+    <div className='game_chess'>
       <Board />
+      <p>It is <span id='player'></span> go.</p>
+      <p id='info-display'></p>
     </div>
   );
 }
